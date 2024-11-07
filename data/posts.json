@@ -1,0 +1,12 @@
+[
+  {
+    "title": "My First Post",
+    "content": "This is the content of the post",
+    "id": 1,
+    "likes": 9,
+    "comments": [
+      "This is a great post!",
+      "This is a great post!"
+    ]
+  }
+]

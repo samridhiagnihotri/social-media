@@ -1,0 +1,10 @@
+[
+  {
+    "username": "john",
+    "password": "$2a$10$dRPSJcDoBauJG3hehWzGf.i.FSRHWW2mz6FU2G933Jm1hTShhf9G."
+  },
+  {
+    "title": "My First Post",
+    "content": "This is the content of the post"
+  }
+]

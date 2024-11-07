@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "username": "john_doe",
+      "password": "$2a$10$RXBZsO1EvPCfJGvz83FdXOtok0orFiKKr95UgOsBjapA98VHdP/PC"
+    },
+    {
+      "username": "john",
+      "password": "$2a$10$EGaWHJjMRSCusEWez4290e9dnojy6K84HBPrMBjNHBpNum.5P4Srq"
+    }
+  ],
+  "posts": [],
+  "comments": []
+}
