@@ -233,7 +233,37 @@ app.get('/posts', (req, res) => {
       });
     });
   });
+  app.delete('/posts/:id', (req, res) => {
+  const postId = parseInt(req.params.id);
   
+  fs.readFile(DATA_FILE, 'utf8', (err, data) => {
+    if (err) {
+      return res.status(500).send({ message: 'Error reading posts data' });
+    }
+    let posts = [];
+    try {
+      posts = JSON.parse(data);
+    } catch (parseError) {
+      posts = [];
+    }
+
+    const postIndex = posts.findIndex(p => p.id === postId);
+    if (postIndex === -1) {
+      return res.status(404).send({ message: 'Post not found' });
+    }
+
+    // Remove the post
+    posts.splice(postIndex, 1);
+
+    fs.writeFile(DATA_FILE, JSON.stringify(posts, null, 2), (writeError) => {
+      if (writeError) {
+        return res.status(500).send({ message: 'Error saving posts data' });
+      }
+      res.status(200).send({ message: 'Post deleted successfully' });
+    });
+  });
+});
+
   
   // Server setup
   app.listen(PORT, () => {
